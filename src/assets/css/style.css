@@ -1,0 +1,115 @@
+
+:root{
+    --blue-default: #0076A7;
+    --blue-hover:#086A93;
+    --blue-clicked: #368FB4;
+    --blue-disabled: #CBE4EE;
+    --border-primary: 2px solid #0076A7;
+    --success:  #06CC1A;
+    --danger:  #EE0E0E;
+    --purple: #115FDB;
+    --orange: #F65B2B;
+    --pink:#E5017C;
+
+
+}
+input::placeholder{
+    color: var(--blue-default);
+}
+.box-radius{
+    border-radius: 8px;
+}
+.border-blue{
+    border: var(--border-primary);
+}
+.input-box{
+    width:400px;
+    height: 58px;
+}
+.border-default{
+    border:1px solid #B2B2B2;
+}
+.border-success{
+    border:1px solid #06CC1A;
+}
+.border-danger{
+    border:1px solid #EE0E0E;
+}
+.border-infos{
+    border:1px solid #0076A7;
+}
+.bg-image{
+    background-image: url('../images/hometech.svg');
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
+    
+}
+.text-blue{
+    color: var(--blue-default);
+}
+.text-danger::placeholder{
+    color:  var(--danger);
+}
+.bg-blue{
+    background-color: var(--blue-default);
+}
+.text-grey{
+    color: #8E8E8E;
+
+}
+.round-num{
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+}
+.round-col{
+    border-radius: 50%;
+    width: 80px;
+    height:80px;
+    cursor: pointer;
+}
+.round-col:hover{
+    opacity: 0.7;
+}
+span.text-blue{
+    cursor: pointer;
+}
+input.bg-blue:hover{
+    background-color:var(--blue-hover);
+}
+input.bg-blue:active{
+    background-color:var(--blue-clicked);
+}
+input[type="button"].bg-white.border-blue:hover,input[type="button"].bg-trans.border-white:hover{
+    background-color: #BDE0EF !important;
+}
+input[type="button"].bg-white.border-blue:active{
+    background-color: #98CBE0 !important;
+}
+.bg-purple{
+    background-color: var(--purple);
+}
+.bg-pink{
+    background-color: var(--pink);
+}
+.bg-orange{
+    background-color: var(--orange);
+}
+.img-wrap{
+    height: 110px;
+    width: 140px;
+}
+.img-box{
+    width: 200px;
+    height: 200px;
+}
+.m-nl-20{
+    margin-left: -43px;
+}
+.bg-trans{
+    background-color: transparent;
+}
