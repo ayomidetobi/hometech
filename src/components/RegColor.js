@@ -40,7 +40,7 @@ function RegColor() {
 
     return (
       <div>
-        {/* <Header /> */}
+         <Header /> 
         <div className="bg-image p-tb-50 ">
           
           <section className='w-30 mx-auto d-block bg-white p-lr-40 p-t-70 p-b-54 box-radius text-center m-b-80'>

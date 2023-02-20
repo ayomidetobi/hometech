@@ -1,6 +1,7 @@
 import '../assets/css/newhelper.css';
 import '../assets/css/style.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
+import { RegContext } from '../assets/contexts/RegContext';
 import { API } from '../api-service';
 import { useCookies } from 'react-cookie';
 import Header from '../components/Header';
@@ -14,7 +15,7 @@ function Home() {
   
     
     const [ password, setPassword ] = useState('');
-    const [ email, setEmail ] = useState('');
+    const  { email,setEmail } = useContext(RegContext);
     const [ isLoginView, setIsLoginView ] = useState(true);
     const navigate = useNavigate();
   
@@ -30,12 +31,12 @@ function Home() {
     };
 
     return (
-      <div>
+      <>
         <Header />
         <div className="bg-image p-tb-60 ">
           <section className=' mx-auto d-block   p-t-195 p-b-54 text-center m-b-80 p-b-200'>
           <span className='text-white fs-32 f-w-700'>Welcome</span>
-            <p className='fs-72 p-t-40 text-white f-w-800'>Ahmed Rufai</p>
+            <p className='fs-72 p-t-40 text-white f-w-800'>{email}</p>
             
           
           <div className="mb-3 p-lr-72 w-30 d-block mx-auto ">
@@ -45,7 +46,7 @@ function Home() {
            
           </section>
         </div>
-      </div>
+      </>
     )
   }
   

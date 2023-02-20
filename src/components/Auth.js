@@ -12,11 +12,8 @@ import RegColor from './RegColor';
 
 
 function Auth() {
-    const  { email,setEmail } = useContext(RegContext);
+    const  { email, setEmail,fullName, setFullName,submitted, setSubmitted } = useContext(RegContext);
     const  [password,setPassword ] = useState('');
-    
-    const [ fullName, setFullName ] = useState(''); 
-    const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState(false);
     const [passerror, setPassError] = useState(false);
     const [emailerror, setEmailError] = useState(false);
@@ -58,9 +55,7 @@ function Auth() {
               setError(false);
               setPassError(false);
               setEmailError(false);
-              
-              
-              
+              navigateToRegCol() 
             }
             
       }
@@ -135,13 +130,13 @@ function Auth() {
               }; 
       
     return (
-      <div>
+      <>
         <Header />
 
         <div className="bg-image p-tb-40 ">
           <section className='w-30 mx-auto d-block bg-white p-lr-40 p-t-52 p-b-54 box-radius text-center m-b-80'>
             <img src={arrow} alt="" className='float-start' onClick={navigateToHome} /><span className='text-blue fs-24 f-w-700'>Create an Account</span>
-              <p className='fs-16 p-t-10 text-grey f-w-400'>Fill in your details below to create an <br /> account with us</p>
+              <p className='fs-16 p-t-10 text-grey f-w-400'>Fill in your details below to create an <br /> account with us{email}</p>
             <div className='d-flex justify-content-around m-t-30 p-lr-72'>
               <span className='border-infos round-num text-white bg-blue fs-16 p-tb-5'>1</span>
               <span className='border-infos round-num text-blue bg-white fs-16 p-tb-5'>2</span>
@@ -197,7 +192,7 @@ function Auth() {
         
         
         
-      </div>
+      </>
     )
   }
   

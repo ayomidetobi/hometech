@@ -1,18 +1,19 @@
 import '../assets/css/newhelper.css';
 import '../assets/css/style.css';
-import React, { useState } from 'react';
+import React, {useState, useContext } from 'react';
 import { API } from '../api-service';
 import Header from '../components/Header';
 import arrow from '../assets/images/arrow.png'
 import {useNavigate} from 'react-router-dom';
+import { RegContext } from '../assets/contexts/RegContext';
+
   
 
 
 function Login() {
     const [ password, setPassword ] = useState('');
-    const [ email, setEmail ] = useState('');
-
-    const [submitted, setSubmitted] = useState(false);
+    const  { email, setEmail, setSubmitted } = useContext(RegContext);
+    const {isNext,setIsNext} = useState(false)
     const [passerror, setPassError] = useState(false);
     const [emailerror, setEmailError] = useState(false);
 

@@ -15,6 +15,7 @@ import Home from '../src/components/Home';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CookiesProvider } from 'react-cookie';
+import { RegProvider } from './assets/contexts/RegContext';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       element: <Login />,
 },
 {
-  path: "/Auth",
+  path: "/Register",
   element: <Auth />,
 },
 {
@@ -59,12 +60,12 @@ element: <RegPath />,
   element: <RegColor />,
 },
 {
-    path: "/Register",
+    path: "/Auth",
     element: <Register />,
   },
   {
       path: "/",
-      element: <App />,
+      element: <Register />,
   },
 ]);
 
@@ -74,7 +75,10 @@ root.render(
   <React.StrictMode>
     
   <CookiesProvider>
+    <RegProvider>
       <RouterProvider router={router} />
+    </RegProvider>
+      
   </CookiesProvider>
   
 </React.StrictMode>
